@@ -1,0 +1,11 @@
+register
+login
+logout
+
+posts
+categories
+account
+about
+
+create post
+post comment
