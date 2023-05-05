@@ -17,10 +17,34 @@
         <!-- title -->
         <h3 id="title">About</h3>
 
-        <!-- categories -->
-        <p>#1</p>
-        <p>#2</p>
-        <p>#3</p>
+        <!-- info -->
+        <div id="about" class="menuCategory">
+            <p id="aboutText">This is a student project, made to learn about PHP</p>
+        </div>
+
+        <!-- privacy policy -->
+        <h3 id="privacyPolicyTitle" class="menuCategoryTitle">Privacy Policy</h3>
+        <div id="privacyPolicy" class="menuCategory">
+            <p class="privacyPolicyItem">Collects Account Data: <span class="yes">Yes</span></p>
+            <p class="privacyPolicyItem">Collects Personal Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Collects Device Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Collects Metrics Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Collects Diagnostics Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Collects Location Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Collects Financial Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Collects Messages Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Collects Media Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Uses Cookies: <span class="yes">Yes</span></p>
+            <p class="privacyPolicyItem">Uses Local Storage: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Links to Other Websites: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Policy Might Change in the Future: <span class="yes">Yes</span></p>
+        </div>
+
+        <!-- contact -->
+        <h3 id="contactTitle" class="menuCategoryTitle">Contact</h3>
+        <div id="contact">
+            <a href="mailto:sinco.developer@gmail.com" id="contactText">sinco.developer@gmail.com</a>
+        </div>
     </div>
 </body>
 </html>
@@ -52,4 +76,14 @@
         vertical-align: top;
     }
     #title { margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
+    #aboutText { margin: -10px 0px 0px 0px; text-align: center; }
+    #contactText { text-align: center; font-weight: normal; color: white; }
+    #contact { text-align: center; }
+    #about { text-align: center; }
+
+    /*** classes ***/
+    .yes { color: lightgreen; }
+    .no { color: red; }
+    .privacyPolicyItem { margin: 0px; padding: 3px 0px 0px 0px; font-weight: normal; text-align: center; color: white; }
+    .menuCategoryTitle { width: 100%; margin: auto; margin-top: 40px; padding: 0px; text-align: center; font-weight: bold; }
 </style>
