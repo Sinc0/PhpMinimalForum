@@ -198,13 +198,13 @@
         {
             formPostComment.style.display = "block"
             formPostCommentTitle.innerText = "Cancel"
-            // comments.style.display = "none"
+            comments.style.display = "none"
         }
         else if(formPostComment.style.display == "block")
         {
             formPostComment.style.display = "none"
             formPostCommentTitle.innerText = "Reply"
-            // comments.style.display = "block"
+            comments.style.display = "block"
         }
     }
 
@@ -288,8 +288,8 @@
     #formPostComment { display: none; width: calc(31vw - 19px); }
     #comments 
     {
-        display: block;
-        max-height: 49vh;
+        display: none;
+        max-height: 72vh;
         width: calc(31vw + 4px);
         /* margin: 0px 0px 20px 0px; */
         overflow-y: scroll;
@@ -344,5 +344,23 @@
         /* border-right: 1px solid white; */
         color: white;
         background-color: black;
+    }
+
+    /*** mobile ***/
+    @media screen and (max-width: 1300px) {
+        .post::-webkit-scrollbar { height: 0px; width: 0px; }
+
+        body { height: 98vh; width: 89vw; border: 0px; }
+
+        #main { max-height: 92vh; width: 100%; margin: 0px; }
+        #comments { max-height: 62vh; width: auto; }
+        #title { margin-bottom: 2px; }
+        #postTitle { margin-left: 0px; }
+        #postText { margin-left: 0px; }
+        #postAuthor { margin-left: 0px; }
+        #formPostComment { width: 100%; }
+        #buttonPostComment { width: 100%; }
+
+        .commment { width: auto; white-space: nowrap; overflow-x: auto; }
     }
 </style>

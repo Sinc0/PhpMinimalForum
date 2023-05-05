@@ -22,9 +22,13 @@
     
     <!-- links -->
     <a href="/posts.php"><div id="sidebar-home" class="sidebar-button">Posts</div></a>
+    <span class="mobile-sidebar-filler"> · </span>
     <a href="/categories.php"><div id="sidebar-home" class="sidebar-button">Categories</div></a>
+    <span class="mobile-sidebar-filler"> · </span>
     <a href="/account.php"><div id="sidebar-home" class="sidebar-button">Account</div></a>
+    <span class="mobile-sidebar-filler"> · </span>
     <a href="/about.php"><div id="sidebar-home" class="sidebar-button">About</div></a>
+    <span class="mobile-sidebar-filler"> · </span>
     <div id="sidebar-filler" class="sidebar-button">&#8192</div>
     <a href="/logout.php"><div id="sidebar-logout" class="sidebar-button">Logout</div></a>
     <!-- <a href="/logout.php"><div id="sidebar-logout" class="sidebar-button">Logout <?php echo $_SESSION['username'] ?> </div></a> -->
@@ -65,4 +69,26 @@
         /* background-color: black; */
     }
     .sidebar-button:hover { color: rgb(243, 243, 0); /* color: rgb(0, 247, 0); */ }
+    .mobile-sidebar-filler { display: none; }
+
+
+    /*** mobile ***/
+    @media screen and (max-width: 1300px) {
+        #sidebar::-webkit-scrollbar { height: 0px; width: 0px; }
+
+        #sidebar 
+        { 
+            display: flex; 
+            flex-direction: row; 
+            width: 100%; 
+            margin: 0px; 
+            padding: 10px 0px 11px 0px; 
+            overflow-y: hidden; 
+            overflow-x: auto; 
+        }
+        #sidebar-filler { display: none; }
+
+        .sidebar-button { display: block; margin: 0px; opacity: 0.4; }
+        .mobile-sidebar-filler { display: block; margin: 3px 6px 0px 6px; font-weight: bold; opacity: 0.4; color: white; }
+    }
 </style>

@@ -1,4 +1,4 @@
-<!-- home.php -->
+<!-- account.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,7 +154,7 @@
                 <input id="oldPassword" required type="password" name="oldPassword" value="<?php echo $user_password ?>" title="old password" placeholder='old password' />
                 <input id="newPassword" required type="password" name="newPassword" value="" title="new password" placeholder='new password' />
                 <input id="newPasswordConfirm" required type="password" name="newPasswordConfirm" value="" title="new password confirm" placeholder='new password confirm' />
-                <button type="submit">Update</button>
+                <button id="buttonUpdatePassword" type="submit">Update</button>
             </form>
         </div>
     </div>
@@ -275,5 +275,33 @@
         font-weight: bold;
         text-align: center; 
         color: lightgreen; 
+    }
+
+    /*** mobile ***/
+    @media screen and (max-width: 1300px) {
+        .post::-webkit-scrollbar { height: 0px; width: 0px; }
+
+        body { height: 98vh; width: 89vw; border: 0px; }
+        input { width: -webkit-fill-available; }
+
+        #main { max-height: 90vh; width: 100%; margin: 0px; text-align: left; overflow-x: hidden; }
+        #comments { max-height: 62vh; width: auto; }
+        #title { display: none; margin-bottom: 2px; }
+        #postTitle { margin-left: 0px; }
+        #postText { margin-left: 0px; }
+        #postAuthor { margin-left: 0px; }
+        #formPostComment { width: 100%; }
+        #buttonPostComment { width: 100%; }
+        #categoryTitle { text-align: center; }
+        #buttonUpdateDetails { width: -webkit-fill-available; }
+        #buttonUpdatePassword { width: -webkit-fill-available; }
+        #formAccountDetails { width: auto; }
+        #formAccountChangePassword { width: auto; }
+        #imgShowPassword { position: absolute; right: 10px; margin-left: 290px; }
+        #imgHidePassword {position: absolute; right: 10px; margin-left: 290px; }
+        #accountDetailsTitle { margin-top: 12px; }
+
+        .post { width: auto; white-space: nowrap; overflow-x: auto; }
+        .sectionTitle { width: auto; text-align: center; }
     }
 </style>

@@ -1,4 +1,4 @@
-<!-- home.php -->
+<!-- posts.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +77,7 @@
         background-color: black; 
     }
 
-    /*** elements ***/
+    /*** ids ***/
     #main { position: relative; display: inline-block; height: auto; margin: 40px 0px 0px -4px; width: calc(31vw + 4px); vertical-align: top; }
     #title { margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
     #posts { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: left; }
@@ -91,5 +91,18 @@
         font-size: 18px;
         border-bottom: 1px solid black;
         background-color: white;
+    }
+
+    /*** mobile ***/
+    @media screen and (max-width: 1300px) {
+        .post::-webkit-scrollbar { height: 0px; width: 0px; }
+
+        body { height: 98vh; width: 89vw; border: 0px; }
+
+        #main { width: 100%; margin: 0px; }
+        #posts { max-height: 90vh; }
+        #title { display: none; margin-bottom: 2px; }
+
+        .post { width: auto; white-space: nowrap; overflow-x: auto; }
     }
 </style>

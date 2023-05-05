@@ -1,3 +1,4 @@
+<!-- index.php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -222,8 +223,13 @@
         background-color: black;
     }
     body { margin-top: 28vh; font-family: Arial, Helvetica, sans-serif; }
-    form { margin: auto; margin-top: 30px; margin-bottom: 30px; border: 1px solid black; background-color: gray;
-    }
+    form { margin: auto; margin-top: 30px; margin-bottom: 30px; border: 1px solid black; background-color: gray; }
+    h1 { font-family: Arial, Helvetica, sans-serif; } 
+    h2 { font-family: Arial, Helvetica, sans-serif; } 
+    h3 { font-family: Arial, Helvetica, sans-serif; } 
+    p { font-family: Arial, Helvetica, sans-serif; } 
+    b { font-family: Arial, Helvetica, sans-serif; } 
+    button { font-family: Arial, Helvetica, sans-serif; }
     input
     {
         width: 378px;
@@ -236,12 +242,6 @@
         border-bottom: 1px solid gray;
         background-color: black;
     }
-    h1 { font-family: Arial, Helvetica, sans-serif; } 
-    h2 { font-family: Arial, Helvetica, sans-serif; } 
-    h3 { font-family: Arial, Helvetica, sans-serif; } 
-    p { font-family: Arial, Helvetica, sans-serif; } 
-    b { font-family: Arial, Helvetica, sans-serif; } 
-    button { font-family: Arial, Helvetica, sans-serif; }
 
     /*** ids ***/
     #login { width: 400px; margin: auto; }
@@ -294,4 +294,18 @@
         background-color: white;
     }
     #loginErrorMessage { color: red; }
+
+    /*** mobile ***/
+    @media screen and (max-width: 1300px) {
+        html { height: 90vh; width: 89vw; margin: auto; }
+        body { height: auto; width: 89vw; margin: 31vh 0px 0px 0px; padding: 0px; overflow-x: hidden; overflow-y: hidden; }
+        input { width: -webkit-fill-available; }
+
+        #selectLoginOrRegister { width: 90vw; }
+        #login { width: 100%; }
+        #register { width: 100%; }
+        #loginButton { width: -webkit-fill-available; }
+        #registerButton { width: -webkit-fill-available; }
+
+    }
 </style>

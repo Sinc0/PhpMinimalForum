@@ -142,6 +142,7 @@
 </script>
 
 <style>
+    /*** elements ***/
     html { background-color: black; }
     body 
     { 
@@ -176,6 +177,7 @@
         user-select: none;
     }
 
+    /*** ids ***/
     #main
     {
         position: relative;
@@ -223,6 +225,7 @@
         overflow-y: auto;
     }
 
+    /*** classes ***/
     .post
     {
         width: calc(31vw - 16px);
@@ -231,5 +234,24 @@
         font-size: 18px;
         border-bottom: 1px solid black;
         background-color: white;
+    }
+
+    /*** mobile ***/
+    @media screen and (max-width: 1300px) {
+        .post::-webkit-scrollbar { height: 0px; width: 0px; }
+
+        body { height: 98vh; width: 89vw; border: 0px; }
+
+        #main { max-height: 92vh; width: 100%; margin: 0px; }
+        #comments { max-height: 62vh; width: auto; }
+        #title { margin-bottom: 2px; }
+        #postTitle { margin-left: 0px; }
+        #postText { margin-left: 0px; }
+        #postAuthor { margin-left: 0px; }
+        #formPostComment { width: 100%; }
+        #buttonPostComment { width: 100%; }
+        #categoryTitle { text-align: center; }
+
+        .post { width: auto; white-space: nowrap; overflow-x: auto; }
     }
 </style>
