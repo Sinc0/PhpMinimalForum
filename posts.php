@@ -56,6 +56,12 @@
 </html>
 
 <style>
+    /*** scrollbar ***/
+    ::-webkit-scrollbar { height: 10px; width: 3px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: gray; }
+    /* ::-webkit-scrollbar-thumb:hover { background: #600; } */
+
     /*** elements ***/
     html { background-color: black; }
     body 
@@ -74,7 +80,7 @@
     /*** elements ***/
     #main { position: relative; display: inline-block; height: auto; margin: 40px 0px 0px -4px; width: calc(31vw + 4px); vertical-align: top; }
     #title { margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
-    #posts { text-align: left; }
+    #posts { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: left; }
 
     /*** classes ***/
     .post 

@@ -6,5 +6,5 @@
     // $db['db_pass'] = "";
 
     //connect to db
-    //$db_connection = mysqli_connect('localhost', 'root', '', 'forum');    
+    //$db_connection = mysqli_connect('localhost', 'root', '', 'forum');
 ?>

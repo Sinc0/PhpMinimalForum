@@ -42,8 +42,8 @@
                     
                     $category_title = $row['category_title'];
                     
-                    // echo "<a href='/category.php/?category=$category_title'><div id='sidebar-category#' class='sidebar-button'> · $category_title</div></a>";
                     echo "<a href='/category.php/?category=$category_title'><div class='category'> $category_title</div></a>";
+                    // echo "<a href='/category.php/?category=$category_title'><div id='sidebar-category#' class='sidebar-button'> · $category_title</div></a>";
                 }
             ?>
         </div>
@@ -52,6 +52,12 @@
 </html>
 
 <style>
+    /*** scrollbar ***/
+    /* ::-webkit-scrollbar { height: 10px; width: 3px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: gray; } */
+    /* ::-webkit-scrollbar-thumb:hover { background: #600; } */
+
     /*** elements ***/
     html { background-color: black; }
     body 
@@ -78,7 +84,7 @@
         vertical-align: top;
     }
     #title { margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
-    #categories { text-align: center; }
+    #categories { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: center; }
 
     .category
     {
