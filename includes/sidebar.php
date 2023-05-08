@@ -21,16 +21,34 @@
     ?>
     
     <!-- links -->
-    <a href="/posts.php"><div id="sidebar-home" class="sidebar-button">Posts</div></a>
+    <a href="/posts.php" onclick="test()">
+        <div id="sidebar-posts" class="sidebar-button">Posts</div>
+    </a>
+    
     <span class="mobile-sidebar-filler"> · </span>
-    <a href="/categories.php"><div id="sidebar-home" class="sidebar-button">Categories</div></a>
+    
+    <a href="/categories.php">
+        <div id="sidebar-categories" class="sidebar-button">Categories</div>
+    </a>
+    
     <span class="mobile-sidebar-filler"> · </span>
-    <a href="/account.php"><div id="sidebar-home" class="sidebar-button">Account</div></a>
+    
+    <a href="/account.php">
+        <div id="sidebar-account" class="sidebar-button">Account</div>
+    </a>
+
     <span class="mobile-sidebar-filler"> · </span>
-    <a href="/about.php"><div id="sidebar-home" class="sidebar-button">About</div></a>
+    
+    <a href="/about.php">
+        <div id="sidebar-about" class="sidebar-button">About</div>
+    </a>
+    
     <span class="mobile-sidebar-filler"> · </span>
     <div id="sidebar-filler" class="sidebar-button">&#8192</div>
-    <a href="/logout.php"><div id="sidebar-logout" class="sidebar-button">Logout</div></a>
+    
+    <a href="/logout.php">
+        <div id="sidebar-logout" class="sidebar-button">Logout</div>
+    </a>
     <!-- <a href="/logout.php"><div id="sidebar-logout" class="sidebar-button">Logout <?php echo $_SESSION['username'] ?> </div></a> -->
 </div>
 
@@ -39,7 +57,8 @@
     ::-webkit-scrollbar { height: 0px; width: 0px; }
 
     /*** ids ***/
-    #sidebar-logout { /* background-color: red; */ }
+    #sidebar-logout { opacity: 0.4; }
+    #sidebar-logout:active { opacity: 1; }
     #sidebar
     {
         position: block;
@@ -62,13 +81,12 @@
         width: auto;
         margin: 14px 0px 0px 0px;
         padding: 0px;
-        font-size: 18px;
+        font-size: 20px;
         color: white;
         user-select: none;
         overflow-x: auto;
         /* background-color: black; */
     }
-    .sidebar-button:hover { color: rgb(243, 243, 0); /* color: rgb(0, 247, 0); */ }
     .mobile-sidebar-filler { display: none; }
 
 
@@ -82,7 +100,7 @@
             flex-direction: row; 
             width: 100%; 
             margin: 0px; 
-            padding: 10px 0px 11px 0px; 
+            padding: 10px 0px 0px 0px; 
             overflow-y: hidden; 
             overflow-x: auto; 
         }

@@ -1,4 +1,5 @@
-<?php 
+<?php
+    //handle session
     session_start();
     session_destroy();
     

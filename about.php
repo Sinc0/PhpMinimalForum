@@ -2,17 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page title -->
     <title>About</title>
 
     <!-- imports -->
     <link rel="stylesheet" href="./styles.css">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
+    <?php include "includes/backbutton.php" ?>
 </head>
 
-<body>
+<body onload="selectedCategory('about')">
     <div id="main">
         <!-- title -->
         <h3 id="title">About</h3>
@@ -50,6 +54,27 @@
 </body>
 </html>
 
+
+<script>
+    function selectedCategory(category)
+    {
+        //elements
+        let selectedCategory = document.getElementById("sidebar-" + category)
+        let posts = document.getElementById("sidebar-posts")
+        let categories = document.getElementById("sidebar-categories")
+        let account = document.getElementById("sidebar-account")
+        let about = document.getElementById("sidebar-about")
+
+        //update elements
+        posts.style.opacity = "0.4"
+        categories.style.opacity = "0.4"
+        account.style.opacity = "0.4"
+        about.style.opacity = "0.4"
+        selectedCategory.style.opacity = "1"
+    }
+</script>
+
+
 <style>
     /*** elements ***/
     html { background-color: black; }
@@ -77,7 +102,7 @@
         vertical-align: top;
     }
     #title { margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
-    #aboutText { margin: -10px 0px 0px 0px; text-align: center; }
+    #aboutText { margin: -2px 0px 0px 0px; text-align: center; }
     #contactText { text-align: center; font-weight: normal; color: white; }
     #contact { text-align: center; }
     #about { text-align: center; }

@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page title -->
     <title>Forum</title>
     
     <!-- imports -->
@@ -146,6 +149,7 @@
     ?>
 </head>
 
+
 <body>
     <!-- select login or register -->
     <div id="selectLoginOrRegister">
@@ -175,6 +179,7 @@
     </div>
 </body>
 </html>
+
 
 <script>
     //debugging
@@ -210,6 +215,7 @@
         buttonSelectRegister.style.opacity = "1"
     }
 </script>
+
 
 <style>
     /*** elements ***/

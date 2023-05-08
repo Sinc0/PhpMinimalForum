@@ -2,14 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page title -->
     <title><?php echo $category ?></title>
     
     <!-- imports -->
     <link rel="stylesheet" href="../styles.css">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
+    <?php include "includes/backbutton.php" ?>
 
     <!-- get selected category data from db -->
     <?php
@@ -67,6 +71,7 @@
     ?>
 </head>
 
+
 <body>
     <div id="main">
         <!-- load posts -->
@@ -97,7 +102,7 @@
             }
             else
             {
-                echo "datebase error";
+                // echo "datebase error";
             }
         
         ?>
@@ -117,13 +122,16 @@
 </body>
 </html>
 
+
 <script>
     function displayCreatePost()
     {
+        //elements
         let formCreatePost = document.getElementById("formCreatePost")
         let posts = document.getElementById("posts")
         let formCreatePostTitle = document.getElementById("formCreatePostTitle")
 
+        //update elements
         if(formCreatePost.style.display == "none" || formCreatePost.style.display == "")
         {
             formCreatePost.style.display = "block"
@@ -140,6 +148,7 @@
         }
     }
 </script>
+
 
 <style>
     /*** elements ***/
@@ -189,7 +198,7 @@
     }
     #categoryTitle
     {
-        margin: 0px 0px 10px -1px;
+        margin: 0px 0px 0px -1px;
         font-size: 26px;
         text-align: left;
     }
@@ -229,11 +238,12 @@
     .post
     {
         width: calc(31vw - 16px);
-        padding: 10px;
+        padding: 10px 10px 10px 0px;
         overflow-wrap: break-word;
         font-size: 18px;
-        border-bottom: 1px solid black;
-        background-color: white;
+        color: white;
+        border-bottom: 1px solid white;
+        background-color: black;
     }
 
     /*** mobile ***/
@@ -241,6 +251,8 @@
         .post::-webkit-scrollbar { height: 0px; width: 0px; }
 
         body { height: 98vh; width: 89vw; border: 0px; }
+        input { width: -webkit-fill-available; }
+        textarea { max-width: -webkit-fill-available; min-width: -webkit-fill-available; }
 
         #main { max-height: 92vh; width: 100%; margin: 0px; }
         #comments { max-height: 62vh; width: auto; }
@@ -250,8 +262,18 @@
         #postAuthor { margin-left: 0px; }
         #formPostComment { width: 100%; }
         #buttonPostComment { width: 100%; }
-        #categoryTitle { text-align: center; }
+        #categoryTitle { margin: 0px; text-align: center; }
+        #buttonCreatePost { width: -webkit-fill-available; }
+        #formCreatePost { width: auto; }
 
-        .post { width: auto; white-space: nowrap; overflow-x: auto; }
+        .post 
+        { 
+            width: auto; 
+            white-space: nowrap; 
+            overflow-x: auto; 
+            color: white; 
+            border-bottom: 1px solid #ffffff66; 
+            background-color: black; 
+        }
     }
 </style>

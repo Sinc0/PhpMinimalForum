@@ -2,14 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page title -->
     <title>Account</title>
     
     <!--- imports -->
     <link rel="stylesheet" href="./styles.css">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
+    <?php include "includes/backbutton.php" ?>
 
     <!--- get username data from db -->
     <?php
@@ -122,7 +126,7 @@
     ?>
 </head>
 
-<body>
+<body onload="selectedCategory('account')">
     <div id="main">
         <!-- title -->
         <h1 id="title">Account</h1>
@@ -149,8 +153,8 @@
                 <input hidden type="text" name="id" value="<?php echo $user_id ?>" placeholder='' />
                 <input hidden type="text" name="password">
                 <input hidden value="<?php echo $user_id ?>" placeholder='' />
-                <img id="imgShowPassword" src='/imgPasswordShow.png' onclick="showPassword()" />
-                <img id="imgHidePassword" src='/imgPasswordHide.png' onclick="showPassword()" />
+                <img id="imgShowPassword" src='/imgs/imgPasswordShow.png' onclick="showPassword()" />
+                <img id="imgHidePassword" src='/imgs/imgPasswordHide.png' onclick="showPassword()" />
                 <input id="oldPassword" required type="password" name="oldPassword" value="<?php echo $user_password ?>" title="old password" placeholder='old password' />
                 <input id="newPassword" required type="password" name="newPassword" value="" title="new password" placeholder='new password' />
                 <input id="newPasswordConfirm" required type="password" name="newPasswordConfirm" value="" title="new password confirm" placeholder='new password confirm' />
@@ -160,6 +164,7 @@
     </div>
 </body>
 </html>
+
 
 <script>
     function showPassword()
@@ -189,7 +194,25 @@
             imgShowPassword.style.display = "block"
         }
     }
+
+    function selectedCategory(category)
+    {
+        //elements
+        let selectedCategory = document.getElementById("sidebar-" + category)
+        let posts = document.getElementById("sidebar-posts")
+        let categories = document.getElementById("sidebar-categories")
+        let account = document.getElementById("sidebar-account")
+        let about = document.getElementById("sidebar-about")
+
+        //update elements
+        posts.style.opacity = "0.4"
+        categories.style.opacity = "0.4"
+        account.style.opacity = "0.4"
+        about.style.opacity = "0.4"
+        selectedCategory.style.opacity = "1"
+    }
 </script>
+
 
 <style>
     /*** elements ***/
@@ -303,5 +326,7 @@
 
         .post { width: auto; white-space: nowrap; overflow-x: auto; }
         .sectionTitle { width: auto; text-align: center; }
+        .errorMessage { position: relative; margin: auto; }
+        .successfulMessage { position: relative; margin: auto; }
     }
 </style>

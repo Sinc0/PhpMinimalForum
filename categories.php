@@ -2,14 +2,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- page title -->
     <title>Categories</title>
     
     <!-- imports -->
     <link rel="stylesheet" href="./styles.css">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
+    <?php include "includes/backbutton.php" ?>
 
     <!-- get categories data from db -->
     <?php
@@ -21,11 +25,12 @@
         $qLength = mysqli_num_rows($qLoadAllCategories);
         
         //handle query errors
-        if(!$qLoadAllCategories) { die("database error" . mysqli_error($db_connection)); }
+        // if(!$qLoadAllCategories) { die("database error" . mysqli_error($db_connection)); }
     ?>
 </head>
 
-<body>
+
+<body onload="selectedCategory('categories')">
     <div id="main">
         <!-- title -->
         <h3 id="title">Categories</h3>
@@ -50,6 +55,28 @@
     </div>
 </body>
 </html>
+
+
+<script>
+    function selectedCategory(category)
+    {
+        //elements
+        let selectedCategory = document.getElementById("sidebar-" + category)
+        let posts = document.getElementById("sidebar-posts")
+        let categories = document.getElementById("sidebar-categories")
+        let account = document.getElementById("sidebar-account")
+        let about = document.getElementById("sidebar-about")
+
+
+        //update elements
+        posts.style.opacity = "0.4"
+        categories.style.opacity = "0.4"
+        account.style.opacity = "0.4"
+        about.style.opacity = "0.4"
+        selectedCategory.style.opacity = "1"
+    }
+</script>
+
 
 <style>
     /*** scrollbar ***/
@@ -90,12 +117,13 @@
     .category
     {
         width: 20vw;
-        padding: 10px;
+        padding: 20px;
         overflow-wrap: break-word;
         font-size: 18px;
         margin: auto;
-        border-bottom: 1px solid black;
-        background-color: white;
+        color: white;
+        border-bottom: 1px solid #ffffff66;
+        background-color: black;
     }
 
     /*** mobile ***/

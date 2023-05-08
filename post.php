@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="../styles.css">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
+    <?php include "includes/backbutton.php" ?>
     
     <!-- get selected post text from db -->
     <?php
@@ -98,6 +100,7 @@
     <title><?php echo "Post#" . $postId ?></title>
 </head>
 
+
 <body>
     <div id="main">
         <!-- post header -->
@@ -125,8 +128,9 @@
                     echo "<h3 id='postTitle'> $post_title </h3>";
 
                     //post text
-                    echo "<p id='postText'>$post_text</p>";
-                    echo "<p id='postAuthor'>Created: $post_date · By $post_user</p>";
+                    if($post_text != null) { echo "<p id='postText'>$post_text</p>"; }
+                    
+                    echo "<p id='postAuthor'>Created: $post_date · In: $post_category · By: $post_user</p>";
                 }
             }
             else
@@ -141,7 +145,7 @@
         <?php 
             echo "<h1 id='commentsTitle' onclick='displayComments()'>Comments ($qTotalComments) </h1>";
 
-            if($qTotalComments != 0)
+            if($qTotalComments != null)
             {
                 $counter = $qTotalComments + 1;
                 
@@ -165,7 +169,8 @@
             }
             else
             {
-                echo "database error";
+                echo "<div id='comments'>";
+                echo "</div>";
             }
         ?>
 
@@ -184,6 +189,7 @@
     </div>
 </body>
 </html>
+
 
 <script>
     function displayPostComment()
@@ -225,6 +231,7 @@
     }
 </script>
 
+
 <style>
     /*** scrollbar ***/
     #comments::-webkit-scrollbar { height: 10px; width: 3px; }
@@ -236,6 +243,7 @@
     html { background-color: black; }
     body 
     { 
+        height: 100vh;
         width: 60vw; 
         margin: auto; 
         font-family: Arial, Helvetica, sans-serif;
@@ -262,7 +270,7 @@
     {
         position: relative;
         display: inline-block;
-        height: 94vh;
+        height: auto;
         width: calc(31vw + 4px);
         margin: 40px 0px 0px 0px;
         vertical-align: top;
@@ -294,8 +302,8 @@
         /* margin: 0px 0px 20px 0px; */
         overflow-y: scroll;
     }
-    #commentAuthor { opacity: 0.7; }
-    #commentText { margin: 0px; padding: 0px 0px 20px 0px; overflow-wrap: break-word; font-weight: bold; }
+    #commentAuthor { opacity: 0.4; white-space: nowrap; overflow-x: auto; }
+    #commentText { margin: 0px; padding: 0px; overflow-wrap: break-word; font-weight: bold; }
     #commentsTitle 
     { 
         margin: 0px;
@@ -307,12 +315,21 @@
         border-bottom: 1px solid black;
         background-color: white;
     }
-    #postAuthor { margin-left: -1px; padding: 30px 0px 4px 0px; opacity: 0.7; color: white; background-color: black; }
-    #postText { margin-left: -1px; padding: 0px; font-weight: bold; overflow-y: scroll; color: white; background-color: black; }
+    #postAuthor 
+    { 
+        margin-left: 0px; 
+        padding: 0px 0px 6px 0px; 
+        opacity: 0.4;
+        white-space: nowrap;
+        overflow-x: auto;
+        color: white; 
+        background-color: black; 
+    }
+    #postText { margin-left: 0px; padding: 2px 0px 2px 0px; font-weight: normal; overflow-y: scroll; color: white; background-color: black; }
     #postTitle
     {
         margin: 0px;
-        margin-left: -1px;
+        margin-left: 0px;
         font-weight: bold;
         overflow-wrap: break-word;
         font-size: 26px;
@@ -355,7 +372,7 @@
         #main { max-height: 92vh; width: 100%; margin: 0px; }
         #comments { max-height: 62vh; width: auto; }
         #title { margin-bottom: 2px; }
-        #postTitle { margin-left: 0px; }
+        #postTitle { margin-left: 0px; white-space: nowrap; overflow-x: auto; }
         #postText { margin-left: 0px; }
         #postAuthor { margin-left: 0px; }
         #formPostComment { width: 100%; }
