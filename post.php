@@ -162,7 +162,7 @@
                     //comment text
                     echo "<div id='comment#$counter' class='comment'>";
                     echo "<p id='commentText'> $comment_content <p>";
-                    echo "<p id='commentAuthor'>#$counter · By $comment_author · $comment_date </p>";
+                    echo "<p id='commentAuthor'>#$counter · $comment_author · $comment_date </p>";
                     echo "</div>";
                 }
                 echo "</div>";
@@ -372,7 +372,7 @@
         #main { max-height: 92vh; width: 100%; margin: 0px; }
         #comments { max-height: 62vh; width: auto; }
         #title { margin-bottom: 2px; }
-        #postTitle { margin-left: 0px; white-space: nowrap; overflow-x: auto; }
+        #postTitle { margin-left: 0px; padding-top: 2px; white-space: nowrap; overflow-x: auto; }
         #postText { margin-left: 0px; }
         #postAuthor { margin-left: 0px; }
         #formPostComment { width: 100%; }

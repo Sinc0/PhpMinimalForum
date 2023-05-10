@@ -272,7 +272,7 @@
             white-space: nowrap; 
             overflow-x: auto; 
             color: white; 
-            border-bottom: 1px solid #ffffff66; 
+            border-bottom: 1px solid #ffffff33; 
             background-color: black; 
         }
     }

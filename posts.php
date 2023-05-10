@@ -116,7 +116,7 @@
         overflow-wrap: break-word;
         font-size: 18px;
         color: white;
-        border-bottom: 1px solid #ffffff66;
+        border-bottom: 1px solid #ffffff33;
         background-color: black;
     }
 

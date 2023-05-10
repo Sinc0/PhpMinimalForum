@@ -1,3 +1,4 @@
+<!-- struct -->
 <?php
     class Comment
     {

@@ -103,7 +103,7 @@
                 //sql query
                 $query = "INSERT INTO users (user_id, user_username, user_password, user_firstname, user_lastname, 
                 user_email, user_image, user_role, user_salt) 
-                VALUES('0', '$username', '$password', 'null', 'null', 'null', 'null', 'null', 'null');";
+                VALUES('0', '$username', '$password', '', '', '', '', '', '');";
                 $qRegisterUser = mysqli_query($db_connection, $query);
                 
                 //handle query errors
