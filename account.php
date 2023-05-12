@@ -10,7 +10,7 @@
     <title>Account</title>
     
     <!--- imports -->
-    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/public/icon.ico" type="image/x-icon">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
     <?php include "includes/backbutton.php" ?>
@@ -153,8 +153,8 @@
                 <input hidden type="text" name="id" value="<?php echo $user_id ?>" placeholder='' />
                 <input hidden type="text" name="password">
                 <input hidden value="<?php echo $user_id ?>" placeholder='' />
-                <img id="imgShowPassword" src='/imgs/imgPasswordShow.png' onclick="showPassword()" />
-                <img id="imgHidePassword" src='/imgs/imgPasswordHide.png' onclick="showPassword()" />
+                <img id="imgShowPassword" src='/public/imgPasswordShow.png' onclick="showPassword()" />
+                <img id="imgHidePassword" src='/public/imgPasswordHide.png' onclick="showPassword()" />
                 <input id="oldPassword" required type="password" name="oldPassword" value="<?php echo $user_password ?>" title="old password" placeholder='old password' />
                 <input id="newPassword" required type="password" name="newPassword" value="" title="new password" placeholder='new password' />
                 <input id="newPasswordConfirm" required type="password" name="newPasswordConfirm" value="" title="new password confirm" placeholder='new password confirm' />

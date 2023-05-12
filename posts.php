@@ -10,7 +10,9 @@
     <title>Posts</title>
     
     <!-- imports -->
-    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/public/icon.ico" type="image/x-icon">
+    <link rel="manifest" href="/public/pwa/manifest.json">
+    <script src="/public/service-worker.js"></script>
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
     <?php include "includes/backbutton.php" ?>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- imports -->
-    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/public/icon.ico" type="image/x-icon">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
     <?php include "includes/backbutton.php" ?>
