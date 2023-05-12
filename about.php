@@ -10,7 +10,7 @@
     <title>About</title>
 
     <!-- imports -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
     <?php include "includes/backbutton.php" ?>
@@ -22,7 +22,7 @@
         <h3 id="title">About</h3>
 
         <!-- info -->
-        <h3 id="whytTitle" class="menuCategoryTitle">Why</h3>
+        <h3 id="whyTitle" class="menuCategoryTitle">Why</h3>
         <div id="about" class="menuCategory">
             <p id="aboutText">This is a student project, made to learn about PHP</p>
         </div>
@@ -90,6 +90,10 @@
         border-right: 2px solid white;
         background-color: black; 
     }
+    p { margin-top: 0px; margin-bottom: 0px; }
+    a { text-decoration: none; font-weight: bold; color: black; }
+    a:active { color: black; }
+
 
     /*** ids ***/
     #main
@@ -106,7 +110,7 @@
     #contactText { text-align: center; font-weight: normal; color: white; }
     #contact { text-align: center; }
     #about { text-align: center; }
-    #whytTitle { margin-top: 20px; }
+    #whyTitle { margin-top: 20px; }
 
     /*** classes ***/
     .yes { color: lightgreen; }

@@ -10,7 +10,7 @@
     <title>Posts</title>
     
     <!-- imports -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
     <?php include "includes/backbutton.php" ?>
@@ -102,6 +102,10 @@
         border-right: 2px solid white;
         background-color: black; 
     }
+    p { margin-top: 0px; margin-bottom: 0px; }
+    a { text-decoration: none; font-weight: bold; color: black; }
+    a:active { color: black; }
+
 
     /*** ids ***/
     #main { position: relative; display: inline-block; height: auto; margin: 11px 0px 0px -4px; width: calc(34vw + 10px); vertical-align: top; }

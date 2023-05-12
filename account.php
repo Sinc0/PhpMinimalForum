@@ -10,7 +10,7 @@
     <title>Account</title>
     
     <!--- imports -->
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
     <?php include "includes/backbutton.php" ?>
@@ -254,6 +254,10 @@
         border-top: 1px solid gray;
         background-color: white;
     }
+    p { margin-top: 0px; margin-bottom: 0px; }
+    a { text-decoration: none; font-weight: bold; color: black; }
+    a:active { color: black; }
+
 
     /*** ids ***/
     #main

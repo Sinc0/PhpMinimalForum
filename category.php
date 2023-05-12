@@ -10,7 +10,7 @@
     <title><?php echo $category ?></title>
     
     <!-- imports -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
     <?php include "includes/backbutton.php" ?>
@@ -187,6 +187,10 @@
         font-size: 26px;
         user-select: none;
     }
+    p { margin-top: 0px; margin-bottom: 0px; }
+    a { text-decoration: none; font-weight: bold; color: black; }
+    a:active { color: black; }
+
 
     /*** ids ***/
     #main
@@ -198,18 +202,8 @@
         width: calc(33vw + 10px); /* calc(31vw + 4px) */
         vertical-align: top;
     }
-    #categoryTitle
-    {
-        margin: 0px 0px 0px -1px;
-        font-size: 26px;
-        text-align: left;
-    }
-    #formCreatePost
-    {
-        display: none;
-        width: calc(33vw - 11px);
-        margin-left: -2px;
-    }
+    #categoryTitle { margin: 0px 0px 0px -1px; font-size: 26px; text-align: left; }
+    #formCreatePost { display: none; width: calc(33vw - 11px); margin-left: -2px; }
     #formCreatePostTitle 
     { 
         width: auto;
@@ -232,11 +226,8 @@
         border: 0px solid black;
         background-color: white;
     }
-    #posts
-    {
-        max-height: 78vh;
-        overflow-y: auto;
-    }
+    #posts { max-height: 78vh; overflow-y: auto; }
+    #createPostTitle { text-align: center; }
 
     /*** classes ***/
     .post

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- imports -->
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
     <?php include "includes/db.php" ?>
     <?php include "includes/sidebar.php" ?>
     <?php include "includes/backbutton.php" ?>
@@ -269,6 +269,10 @@
     }
     h1 { margin: 0px; font-size: 26px; user-select: none; }
     h3 { margin: 0px; }
+    p { margin-top: 0px; margin-bottom: 0px; }
+    a { text-decoration: none; font-weight: bold; color: black; }
+    a:active { color: black; }
+
 
     /*** ids ***/
     #main
@@ -282,12 +286,7 @@
         overflow-y: scroll;
         overflow-x: hidden;
     }
-    #postHeader
-    {
-        margin: 0px;
-        padding: 0px;
-        color: white;
-    }
+    #postHeader { margin: 0px; padding: 0px; color: white; }
     #buttonPostComment
     {
         width: -webkit-fill-available; /* calc(34vw + 20px) */
@@ -386,8 +385,7 @@
         #postAuthor { margin-left: 0px; }
         #formPostComment { width: 100%; }
         #buttonPostComment { width: 100%; margin-top: -5px; }
-        #commentsTitle { width: 43%; margin-left: -3px; }
-        #formPostCommentTitle { width: 43%; }
+        #commentsTitle { margin-left: -8px; }
 
         .commment { width: auto; white-space: nowrap; overflow-x: auto; }
     }

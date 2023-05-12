@@ -10,7 +10,7 @@
     <title>Forum</title>
     
     <!-- imports -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/icon.ico" type="image/x-icon">
     <?php include "includes/db.php" ?>
 
     <!-- start browser session -->
@@ -248,6 +248,10 @@
         border-bottom: 1px solid gray;
         background-color: black;
     }
+    p { margin-top: 0px; margin-bottom: 0px; }
+    a { text-decoration: none; font-weight: bold; color: black; }
+    a:active { color: black; }
+
 
     /*** ids ***/
     #login { width: 400px; margin: auto; }
@@ -299,7 +303,8 @@
         border: 1px solid black; 
         background-color: white;
     }
-    #loginErrorMessage { color: red; }
+    #loginErrorMessage { color: red; text-align: center; }
+    #registerErrorMessage { text-align: center; }
 
     /*** mobile ***/
     @media screen and (max-width: 1300px) {
