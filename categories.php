@@ -90,7 +90,7 @@
     body 
     { 
         height: 100vh; 
-        width: 60vw; 
+        width: 49vw; 
         margin: auto;
         padding: 0px; 
         font-family: Arial, Helvetica, sans-serif;
@@ -106,18 +106,18 @@
         position: relative;
         display: inline-block;
         height: auto;
-        margin: 40px 0px 0px -4px;
-        width: calc(31vw + 4px);
+        margin: 4px 0px 0px -4px;
+        width: calc(34vw + 10px); /* calc(31vw + 4px) */
         vertical-align: top;
     }
-    #title { margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
+    #title { display: none; margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
     #categories { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: center; }
 
     /*** classes ***/
     .category
     {
-        width: 20vw;
-        padding: 20px;
+        width: auto;
+        padding: 22px;
         overflow-wrap: break-word;
         font-size: 18px;
         margin: auto;
@@ -140,7 +140,7 @@
         #postAuthor { margin-left: 0px; }
         #formPostComment { width: 100%; }
         #buttonPostComment { width: 100%; }
-        #categories { max-height: 90vh; }
+        #categories { max-height: 88vh; margin-top: -10px; }
 
         .category { width: -webkit-fill-available; white-space: nowrap; overflow-x: auto; }
     }

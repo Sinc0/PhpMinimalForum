@@ -81,7 +81,7 @@
     body 
     { 
         height: 100vh; 
-        width: 60vw; 
+        width: 49vw; 
         margin: auto;
         padding: 0px; 
         font-family: Arial, Helvetica, sans-serif;
@@ -97,11 +97,11 @@
         position: relative;
         display: inline-block;
         height: auto;
-        margin: 40px 0px 0px -4px;
-        width: calc(31vw + 4px);
+        margin: 0px 0px 0px -1vw;
+        width: calc(34vw + 10px); /* calc(31vw + 4px) */
         vertical-align: top;
     }
-    #title { margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
+    #title { display: none; margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
     #aboutText { margin: -2px 0px 0px 0px; text-align: center; }
     #contactText { text-align: center; font-weight: normal; color: white; }
     #contact { text-align: center; }

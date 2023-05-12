@@ -93,7 +93,7 @@
     body 
     { 
         height: 100vh; 
-        width: 60vw; 
+        width: 49vw; 
         margin: auto;
         padding: 0px; 
         font-family: Arial, Helvetica, sans-serif;
@@ -104,15 +104,15 @@
     }
 
     /*** ids ***/
-    #main { position: relative; display: inline-block; height: auto; margin: 40px 0px 0px -4px; width: calc(31vw + 4px); vertical-align: top; }
-    #title { margin: 0px 0px 0px -1px; font-size: 26px; text-align: center; }
+    #main { position: relative; display: inline-block; height: auto; margin: 11px 0px 0px -4px; width: calc(34vw + 10px); vertical-align: top; }
+    #title { display: none; margin: 0px 0px 2px -1px; font-size: 26px; text-align: center; }
     #posts { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: left; }
 
     /*** classes ***/
     .post 
     {
-        width: calc(31vw - 16px);
-        padding: 10px 10px 10px 0px;
+        width: auto; /* calc(31vw - 16px) */
+        padding: 12px 12px 12px 0px;
         overflow-wrap: break-word;
         font-size: 18px;
         color: white;
@@ -127,7 +127,7 @@
         body { height: 98vh; width: 89vw; border: 0px; }
 
         #main { width: 100%; margin: 0px; }
-        #posts { max-height: 90vh; }
+        #posts { max-height: 88vh; margin-top: -8px; }
         #title { display: none; margin-bottom: 2px; }
 
         .post { width: auto; white-space: nowrap; overflow-x: auto; }

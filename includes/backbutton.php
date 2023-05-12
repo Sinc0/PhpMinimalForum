@@ -8,10 +8,10 @@
     /*** ids ***/
     #backbutton
     {
-        display: none;
+        display: block;
         position: fixed;
         bottom: 4px;
-        right: calc(22vw - 12px);
+        right: 27vw;
         font-size: 40px;
         font-weight: bold;
         text-shadow: 1px 1px black;

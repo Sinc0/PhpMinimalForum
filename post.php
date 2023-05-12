@@ -141,6 +141,19 @@
             echo "</div>";
         ?>
 
+        <!-- reply to post -->
+        <h1 id="formPostCommentTitle" onclick="displayPostComment()">Reply</h1>
+        <form id="formPostComment" action="" method="POST">
+            <input hidden name="commentDate" value="<?php echo date("Y-m-d H:i:s") ?>"></input>
+            <input hidden name="commentPost" value="<?php echo $postId ?>"></input>
+            <input hidden name="commentPostCategory" value="<?php echo $post_category ?>"></input>
+            <input hidden name="commentUser" value="<?php echo $_SESSION['username'] ?>"></input>
+            <input hidden name="commentEmail" value="test@email.com"></input>
+            <input hidden name="commentStatus" value="test"></input>
+            <textarea required name="commentText" placeholder="comment..." maxlength="1000"></textarea>
+            <button id="buttonPostComment" class="formButton" type="submit"><p>Confirm</p></button>
+        </form>
+
         <!-- post comments -->
         <?php 
             echo "<h1 id='commentsTitle' onclick='displayComments()'>Comments ($qTotalComments) </h1>";
@@ -161,8 +174,8 @@
 
                     //comment text
                     echo "<div id='comment#$counter' class='comment'>";
-                    echo "<p id='commentText'> $comment_content <p>";
                     echo "<p id='commentAuthor'>#$counter · $comment_author · $comment_date </p>";
+                    echo "<p id='commentText'> $comment_content <p>";
                     echo "</div>";
                 }
                 echo "</div>";
@@ -173,19 +186,6 @@
                 echo "</div>";
             }
         ?>
-
-        <!-- reply to post -->
-        <h1 id="formPostCommentTitle" onclick="displayPostComment()">Reply</h1>
-        <form id="formPostComment" action="" method="POST">
-            <input hidden name="commentDate" value="<?php echo date("Y-m-d H:i:s") ?>"></input>
-            <input hidden name="commentPost" value="<?php echo $postId ?>"></input>
-            <input hidden name="commentPostCategory" value="<?php echo $post_category ?>"></input>
-            <input hidden name="commentUser" value="<?php echo $_SESSION['username'] ?>"></input>
-            <input hidden name="commentEmail" value="test@email.com"></input>
-            <input hidden name="commentStatus" value="test"></input>
-            <textarea required name="commentText" placeholder="comment..." maxlength="1000"></textarea>
-            <button id="buttonPostComment" class="formButton" type="submit"><p>Confirm</p></button>
-        </form>
     </div>
 </body>
 </html>
@@ -197,20 +197,25 @@
         //elements
         let formPostComment = document.getElementById("formPostComment")
         let formPostCommentTitle = document.getElementById("formPostCommentTitle")
-        // let comments = document.getElementById("comments")
+        let comments = document.getElementById("comments")
+        let commentsTitle = document.getElementById("commentsTitle")
 
         //update elements
         if(formPostComment.style.display == "none" || formPostComment.style.display == "")
         {
-            formPostComment.style.display = "block"
+            formPostComment.style.display = "inline-block"
             formPostCommentTitle.innerText = "Cancel"
+            formPostCommentTitle.style.width = "-webkit-fill-available"
             comments.style.display = "none"
+            commentsTitle.style.display = "none"
         }
-        else if(formPostComment.style.display == "block")
+        else if(formPostComment.style.display == "inline-block")
         {
             formPostComment.style.display = "none"
+            formPostCommentTitle.style.width = "44%"
             formPostCommentTitle.innerText = "Reply"
             comments.style.display = "block"
+            commentsTitle.style.display = "inline-block"
         }
     }
 
@@ -244,7 +249,7 @@
     body 
     { 
         height: 100vh;
-        width: 60vw; 
+        width: 49vw; 
         margin: auto; 
         font-family: Arial, Helvetica, sans-serif;
         border-left: 1px solid white;
@@ -271,8 +276,8 @@
         position: relative;
         display: inline-block;
         height: auto;
-        width: calc(31vw + 4px);
-        margin: 40px 0px 0px 0px;
+        width: calc(33vw + 10px); /* calc(31vw + 4px) */
+        margin: 18px 0px 0px 4px;
         vertical-align: top;
         overflow-y: scroll;
         overflow-x: hidden;
@@ -285,7 +290,7 @@
     }
     #buttonPostComment
     {
-        width: calc(31vw + 4px);
+        width: -webkit-fill-available; /* calc(34vw + 20px) */
         margin: -4px 0px 0px 1px;
         padding: 10px;
         font-size: 18px;
@@ -293,39 +298,43 @@
         border: 0px solid black;
         background-color: white;
     }
-    #formPostComment { display: none; width: calc(31vw - 19px); }
+    #formPostComment { display: none; width: -webkit-fill-available; margin-left: -1px; }
     #comments 
     {
-        display: none;
+        width: calc(96% - 8px); /* calc(34vw + 10px) */ /* calc(31vw + 4px) */
+        display: block;
         max-height: 72vh;
-        width: calc(31vw + 4px);
         /* margin: 0px 0px 20px 0px; */
         overflow-y: scroll;
     }
     #commentAuthor { opacity: 0.4; white-space: nowrap; overflow-x: auto; }
-    #commentText { margin: 0px; padding: 0px; overflow-wrap: break-word; font-weight: bold; }
+    #commentText { margin: 0px; padding: 4px 0px 0px 0px; overflow-wrap: break-word; font-weight: bold; }
     #commentsTitle 
     { 
-        margin: 0px;
+        display: inline-block;
+        width: 44%;
+        margin: 0px 0px 0px -4px;
         padding: 10px;
         font-size: 18px;
         text-align: center;
+        white-space: nowrap;
         color: black;
         border-top: 1px solid black;
         border-bottom: 1px solid black;
+        border-left: 1px solid black;
         background-color: white;
     }
     #postAuthor 
     { 
         margin-left: 0px; 
-        padding: 0px 0px 6px 0px; 
+        padding: 0px 0px 10px 0px; 
         opacity: 0.4;
         white-space: nowrap;
         overflow-x: auto;
         color: white; 
         background-color: black; 
     }
-    #postText { margin-left: 0px; padding: 2px 0px 2px 0px; font-weight: normal; overflow-y: scroll; color: white; background-color: black; }
+    #postText { margin-left: 0px; padding: 4px 0px 6px 0px; font-weight: normal; overflow-y: scroll; color: white; background-color: black; }
     #postTitle
     {
         margin: 0px;
@@ -338,6 +347,8 @@
     #postHeader { /* height: 78vh; */ }
     #formPostCommentTitle 
     { 
+        display: inline-block;
+        width: 44%;
         margin: 0px;
         margin-top: -1px;
         padding: 10px;
@@ -353,12 +364,10 @@
     {
         width: auto;
         margin: 0px;
-        padding: 20px 12px 20px 12px;
+        padding: 20px 12px 20px 4px;
         font-size: 16px;
-        box-shadow: 0px 0px 3px;
-        /* border-left: 3px solid blue; */
-        /* border-left: 1px solid white; */
-        /* border-right: 1px solid white; */
+        /* box-shadow: 0px 0px 3px; */
+        border-bottom: 1px solid gray;
         color: white;
         background-color: black;
     }
@@ -370,13 +379,15 @@
         body { height: 98vh; width: 89vw; border: 0px; }
 
         #main { max-height: 92vh; width: 100%; margin: 0px; }
-        #comments { max-height: 62vh; width: auto; }
+        #comments { max-height: 62vh; width: calc(98% + 2px); }
         #title { margin-bottom: 2px; }
-        #postTitle { margin-left: 0px; padding-top: 2px; white-space: nowrap; overflow-x: auto; }
+        #postTitle { margin-left: 0px; margin-top: -4px; white-space: nowrap; overflow-x: auto; }
         #postText { margin-left: 0px; }
         #postAuthor { margin-left: 0px; }
         #formPostComment { width: 100%; }
-        #buttonPostComment { width: 100%; }
+        #buttonPostComment { width: 100%; margin-top: -5px; }
+        #commentsTitle { width: 43%; margin-left: -3px; }
+        #formPostCommentTitle { width: 43%; }
 
         .commment { width: auto; white-space: nowrap; overflow-x: auto; }
     }

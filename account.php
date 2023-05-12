@@ -220,7 +220,7 @@
     body 
     { 
         height: 100vh; 
-        width: 60vw; 
+        width: 49vw; 
         margin: auto;
         padding: 0px; 
         font-family: Arial, Helvetica, sans-serif;
@@ -261,13 +261,13 @@
         position: relative;
         display: inline-block;
         height: auto;
-        width: calc(31vw + 4px);
-        margin: 40px 0px 0px 0px;
+        width: calc(34vw + 10px); /* calc(31vw + 4px) */
+        margin: 0px 0px 0px -4px;
         text-align: center;
         vertical-align: top;
     }
-    #title { margin: 0px 0px 0px -1px; font-size: 26px; text-align: center; }
-    #accountChangePasswordTitle { margin-top: 40px; }
+    #title { display: none; margin: 0px 0px 0px -1px; font-size: 26px; text-align: center; }
+    #accountChangePasswordTitle { margin-top: 60px; }
     #inputDisabledUsername { background-color: gray; }
     #imgShowPassword { display: block; position: absolute; height: 27px; width: 40px; margin: 7px 0px 0px 349px; user-select: none; }
     #imgHidePassword { display: none; position: absolute; height: 27px; width: 40px; margin: 7px 0px 0px 349px; user-select: none; }
@@ -276,7 +276,7 @@
     #accountDetailsTitle { margin-top: 20px; }
 
     /*** classes ***/
-    .sectionTitle { width: 400px; margin: auto; text-align: left; user-select: none; }
+    .sectionTitle { width: 400px; margin: auto; margin-bottom: 2px; text-align: center; user-select: none; }
     .errorMessage 
     { 
         display: block; 
@@ -323,6 +323,7 @@
         #imgShowPassword { position: absolute; right: 10px; margin-left: 290px; }
         #imgHidePassword {position: absolute; right: 10px; margin-left: 290px; }
         #accountDetailsTitle { margin-top: 12px; }
+        #accountChangePasswordTitle { margin-top: 40px; }
 
         .post { width: auto; white-space: nowrap; overflow-x: auto; }
         .sectionTitle { width: auto; text-align: center; }

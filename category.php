@@ -138,6 +138,7 @@
             posts.style.display = "none"
 
             formCreatePostTitle.innerText = "Cancel"
+            formCreatePostTitle.style.marginTop = "8px"
         }
         else if(formCreatePost.style.display == "block")
         {
@@ -145,6 +146,7 @@
             posts.style.display = "block"
 
             formCreatePostTitle.innerText = "Create Post"
+            formCreatePostTitle.style.marginTop = "-1px"
         }
     }
 </script>
@@ -156,7 +158,7 @@
     body 
     { 
         height: 100vh; 
-        width: 60vw; 
+        width: 49vw; 
         margin: auto; 
         /* margin-top: 40px;  */
         /* margin-left: 24vw; */
@@ -192,8 +194,8 @@
         position: relative;
         display: inline-block;
         height: auto;
-        margin: 40px 0px 0px -4px;
-        width: calc(31vw + 4px);
+        margin: 18px 0px 0px 4px;
+        width: calc(33vw + 10px); /* calc(31vw + 4px) */
         vertical-align: top;
     }
     #categoryTitle
@@ -205,11 +207,13 @@
     #formCreatePost
     {
         display: none;
-        width: calc(31vw - 19px);
+        width: calc(33vw - 11px);
+        margin-left: -2px;
     }
     #formCreatePostTitle 
     { 
-        margin: 0px 0px -1px 0px; 
+        width: auto;
+        margin: -1px 0px 0px -1px; 
         padding: 10px;
         font-weight: bold;
         font-size: 18px;
@@ -220,7 +224,7 @@
     }
     #buttonCreatePost
     {
-        width: calc(31vw + 4px);
+        width: calc(33vw + 12px);
         margin: -4px 0px 0px 1px;
         padding: 10px;
         font-size: 18px;
@@ -237,7 +241,7 @@
     /*** classes ***/
     .post
     {
-        width: calc(31vw - 16px);
+        width: auto; /* calc(31vw - 16px) */
         padding: 10px 10px 10px 0px;
         overflow-wrap: break-word;
         font-size: 18px;
@@ -263,8 +267,10 @@
         #formPostComment { width: 100%; }
         #buttonPostComment { width: 100%; }
         #categoryTitle { margin: 0px; text-align: center; }
-        #buttonCreatePost { width: -webkit-fill-available; }
+        #buttonCreatePost { width: -webkit-fill-available; margin-top: -5px; }
         #formCreatePost { width: auto; }
+        #posts { max-height: 76vh; }
+        #formCreatePostTitle { width: calc(100% - 20px); margin: 0px 0px 0px -1px; }
 
         .post 
         { 

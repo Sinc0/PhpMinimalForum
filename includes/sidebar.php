@@ -67,7 +67,7 @@
         width: auto;
         top: 0;
         left: 0;
-        margin: 10px calc(8vw + 6px) 20px 30px;
+        margin: 10px calc(2vw + 14px) 20px calc(2vw + 10px);
         overflow-y: scroll;
         overflow-x: hidden;
         white-space: nowrap;
@@ -100,7 +100,7 @@
             flex-direction: row; 
             width: 100%; 
             margin: 0px; 
-            padding: 10px 0px 0px 0px; 
+            padding: 10px 0px 9px 0px; 
             overflow-y: hidden; 
             overflow-x: auto; 
         }
