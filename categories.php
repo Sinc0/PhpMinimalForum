@@ -11,9 +11,9 @@
     
     <!-- imports -->
     <link rel="shortcut icon" href="/public/icon.ico" type="image/x-icon">
-    <?php include "includes/db.php" ?>
-    <?php include "includes/sidebar.php" ?>
-    <?php include "includes/backbutton.php" ?>
+    <?php include "include-db.php" ?>
+    <?php include "include-sidebar.php" ?>
+    <?php include "include-backbutton.php" ?>
 
     <!-- get categories data from db -->
     <?php

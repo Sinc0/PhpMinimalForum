@@ -11,9 +11,9 @@
 
     <!-- imports -->
     <link rel="shortcut icon" href="/public/icon.ico" type="image/x-icon">
-    <?php include "includes/db.php" ?>
-    <?php include "includes/sidebar.php" ?>
-    <?php include "includes/backbutton.php" ?>
+    <?php include "include-db.php" ?>
+    <?php include "include-sidebar.php" ?>
+    <?php include "include-backbutton.php" ?>
 </head>
 
 <body onload="selectedCategory('about')">
@@ -37,7 +37,7 @@
             <p class="privacyPolicyItem">Collects Diagnostics Data: <span class="no">No</span></p>
             <p class="privacyPolicyItem">Collects Location Data: <span class="no">No</span></p>
             <p class="privacyPolicyItem">Collects Financial Data: <span class="no">No</span></p>
-            <p class="privacyPolicyItem">Collects Messages Data: <span class="no">No</span></p>
+            <p class="privacyPolicyItem">Collects Messages Data: <span class="yes">Yes</span></p>
             <p class="privacyPolicyItem">Collects Media Data: <span class="no">No</span></p>
             <p class="privacyPolicyItem">Uses Cookies: <span class="yes">Yes</span></p>
             <p class="privacyPolicyItem">Uses Local Storage: <span class="no">No</span></p>
