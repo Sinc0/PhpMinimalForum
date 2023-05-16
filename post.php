@@ -384,7 +384,7 @@
         #postText { margin-left: 0px; }
         #postAuthor { margin-left: 0px; }
         #formPostComment { width: 100%; }
-        #buttonPostComment { width: 100%; margin-top: -5px; }
+        #buttonPostComment { width: 100%; margin-top: -4px; }
         #commentsTitle { margin-left: -8px; }
 
         .commment { width: auto; white-space: nowrap; overflow-x: auto; }

@@ -12,7 +12,7 @@
     <!-- imports -->
     <link rel="shortcut icon" href="/public/icon.ico" type="image/x-icon">
     <link rel="manifest" href="/public/pwa/manifest.json">
-    <script src="/public/service-worker.js"></script>
+    <script src="/service-worker.js"></script>
     <?php include "include-db.php" ?>
 
     <!-- start browser session -->

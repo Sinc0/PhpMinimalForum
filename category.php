@@ -258,7 +258,7 @@
         #formPostComment { width: 100%; }
         #buttonPostComment { width: 100%; }
         #categoryTitle { margin: 0px; text-align: center; }
-        #buttonCreatePost { width: -webkit-fill-available; margin-top: -5px; }
+        #buttonCreatePost { width: -webkit-fill-available; margin-top: -4px; }
         #formCreatePost { width: auto; }
         #posts { max-height: 76vh; }
         #formCreatePostTitle { width: calc(100% - 20px); margin: 0px 0px 0px -1px; }
