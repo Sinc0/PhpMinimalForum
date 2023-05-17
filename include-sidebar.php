@@ -21,7 +21,7 @@
     ?>
     
     <!-- links -->
-    <a href="/posts.php" onclick="test()">
+    <a href="/posts.php">
         <div id="sidebar-posts" class="sidebar-button">Posts</div>
     </a>
     
@@ -71,6 +71,7 @@
         overflow-y: scroll;
         overflow-x: hidden;
         white-space: nowrap;
+        user-select: none; 
         background-color: black;
         /* border: 1px solid white; */
     }

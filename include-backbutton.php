@@ -1,5 +1,10 @@
-<div id="backbutton" onclick="window.history.back()">
-    <p>➦</p>
+<div id="backbutton" onclick="history.back()">
+    <p>❮</p>
+    <!-- <p>⇠</p> -->
+    <!-- <p>←</p> -->
+    <!-- <p>⇦</p> -->
+    <!-- <p>↩</p> -->
+    <!-- <p>➦</p> -->
     <!-- <p><</p> -->
     <!-- <p>➤</p> -->
 </div>
@@ -15,14 +20,14 @@
         font-size: 40px;
         font-weight: bold;
         text-shadow: 1px 1px black;
-        rotate: 180deg;
-        cursor: default;
-        z-index: 1;
+        user-select: none;
+        opacity: 0.4;
         color: white;
     }
+    #backbutton:active { opacity: 1; }
 
     /*** mobile ***/
     @media screen and (max-width: 1300px) {
-        #backbutton { display: block; right: 16px; }
+        #backbutton { display: block; bottom: 14px; right: 16px; }
     }
 </style>

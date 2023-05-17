@@ -285,8 +285,9 @@
         vertical-align: top;
         overflow-y: scroll;
         overflow-x: hidden;
+        user-select: none; 
     }
-    #postHeader { margin: 0px; padding: 0px; color: white; }
+    #postHeader { margin: 0px; padding: 0px; color: white; user-select: none; }
     #buttonPostComment
     {
         width: -webkit-fill-available; /* calc(34vw + 20px) */
@@ -304,6 +305,7 @@
         display: block;
         max-height: 72vh;
         /* margin: 0px 0px 20px 0px; */
+        user-select: none;
         overflow-y: scroll;
     }
     #commentAuthor { opacity: 0.4; white-space: nowrap; overflow-x: auto; }

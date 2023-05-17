@@ -104,6 +104,7 @@
         margin: 0px 0px 0px -1vw;
         width: calc(34vw + 10px); /* calc(31vw + 4px) */
         vertical-align: top;
+        user-select: none;
     }
     #title { display: none; margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
     #aboutText { margin: -2px 0px 0px 0px; text-align: center; }

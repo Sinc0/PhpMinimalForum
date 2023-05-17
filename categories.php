@@ -113,9 +113,10 @@
         margin: 4px 0px 0px -4px;
         width: calc(34vw + 10px); /* calc(31vw + 4px) */
         vertical-align: top;
+        user-select: none; 
     }
     #title { display: none; margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
-    #categories { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: center; }
+    #categories { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: center; user-select: none; }
 
     /*** classes ***/
     .category

@@ -110,9 +110,18 @@
 
 
     /*** ids ***/
-    #main { position: relative; display: inline-block; height: auto; margin: 11px 0px 0px -4px; width: calc(34vw + 10px); vertical-align: top; }
+    #main 
+    { 
+        position: relative; 
+        display: inline-block; 
+        height: auto; 
+        margin: 11px 0px 0px -4px; 
+        width: calc(34vw + 10px); 
+        vertical-align: top;
+        user-select: none; 
+    }
     #title { display: none; margin: 0px 0px 2px -1px; font-size: 26px; text-align: center; }
-    #posts { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: left; }
+    #posts { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: left; user-select: none; }
 
     /*** classes ***/
     .post 

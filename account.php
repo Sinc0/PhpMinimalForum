@@ -247,6 +247,7 @@
         padding: 10px;
         font-size: 18px;
         font-weight: bold;
+        user-select: none;
         border: 0px solid black;
         border-top: 1px solid gray;
         background-color: white;
@@ -266,6 +267,7 @@
         margin: 0px 0px 0px -4px;
         text-align: center;
         vertical-align: top;
+        user-select: none;
     }
     #title { display: none; margin: 0px 0px 0px -1px; font-size: 26px; text-align: center; }
     #accountChangePasswordTitle { margin-top: 60px; }
