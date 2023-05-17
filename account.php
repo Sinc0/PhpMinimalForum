@@ -47,7 +47,7 @@
         }
     ?>
 
-    <!-- change account details -->
+    <!-- update account details -->
     <?php
         if(isset($_POST['details']))
         {
@@ -60,9 +60,6 @@
             // $password = $_POST['password'];
             
             //sql query
-            // $query = "INSERT INTO users (user_id, user_username, user_password, user_firstname, user_lastname, 
-            // user_email, user_image, user_role, user_salt) 
-            // VALUES('0', '$username', '$password', 'null', 'null', 'null', 'null', 'null', 'null');";
             $query = "UPDATE users 
             SET user_username = '{$username}', user_email = '{$email}', user_firstname = '{$firstname}', 
             user_lastname = '{$lastname}', user_email = '{$email}' 
@@ -82,7 +79,7 @@
         }
     ?>
         
-    <!-- change account password -->
+    <!-- update account password -->
     <?php 
         if(isset($_POST['password']))
         {

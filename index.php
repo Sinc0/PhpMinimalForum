@@ -110,42 +110,6 @@
                 
                 //handle query errors
                 if(!$qRegisterUser) { die("database error" . mysqli_error($db_connection)); }
-
-                // //sql query
-                // $query = "SELECT * FROM users WHERE user_username = '{$username}'";
-                // $qLoadUserByUsername = mysqli_query($db_connection, $query);
-                // $qLength = mysqli_num_rows($qLoadUserByUsername);
-
-                // //sort user data
-                // while($row = mysqli_fetch_assoc($qLoadUserByUsername))
-                // {
-                //     $db_id = $row['user_id'];
-                //     $db_email = $row['user_email'];
-                //     $db_username = $row['user_username'];
-                //     $db_password = $row['user_password'];
-                //     $db_firstname = $row['user_firstname'];
-                //     $db_lastname = $row['user_lastname'];
-                //     $db_role = $row['user_role'];
-                // }
-
-                // if($username == $db_username && $db_password == $password)
-                // {
-                //     $_SESSION['username'] = $db_username;
-                //     $_SESSION['email'] = $db_email;
-                //     $_SESSION['firstname'] = $db_firstname;
-                //     $_SESSION['lastname'] = $db_lastname;
-                    
-                //     echo $_SESSION['username'] . "<br />"; 
-                //     echo $_SESSION['email'] . "<br />"; 
-                //     echo $_SESSION['firstname'] . "<br />"; 
-                //     echo $_SESSION['lastname'];
-
-                //     header("Location: home.php");
-                // }
-                // else
-                // {
-                //     echo "<br /> invalid name or password";
-                // }
             }    
         }
     ?>
