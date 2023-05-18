@@ -15,7 +15,7 @@
     {
         display: block;
         position: fixed;
-        bottom: 4px;
+        bottom: 22px;
         right: 27vw;
         font-size: 40px;
         font-weight: bold;
