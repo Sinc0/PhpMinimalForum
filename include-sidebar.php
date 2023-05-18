@@ -4,7 +4,7 @@
 
     <!-- null check -->
     <?php
-        if($_SESSION['username'] == null) { header('Location: /index.php'); }
+        if($_SESSION['username'] == null) { header('Location: /index'); }
     ?>
 
     <!-- get categories data from db -->
@@ -21,35 +21,35 @@
     ?>
     
     <!-- links -->
-    <a href="/posts.php">
+    <a href="/posts">
         <div id="sidebar-posts" class="sidebar-button">Posts</div>
     </a>
     
     <span class="mobile-sidebar-filler"> · </span>
     
-    <a href="/categories.php">
+    <a href="/categories">
         <div id="sidebar-categories" class="sidebar-button">Categories</div>
     </a>
     
     <span class="mobile-sidebar-filler"> · </span>
     
-    <a href="/account.php">
+    <a href="/account">
         <div id="sidebar-account" class="sidebar-button">Account</div>
     </a>
 
     <span class="mobile-sidebar-filler"> · </span>
     
-    <a href="/about.php">
+    <a href="/about">
         <div id="sidebar-about" class="sidebar-button">About</div>
     </a>
     
     <span class="mobile-sidebar-filler"> · </span>
     <div id="sidebar-filler" class="sidebar-button">&#8192</div>
     
-    <a href="/logout.php">
+    <a href="/logout">
         <div id="sidebar-logout" class="sidebar-button">Logout</div>
     </a>
-    <!-- <a href="/logout.php"><div id="sidebar-logout" class="sidebar-button">Logout <?php echo $_SESSION['username'] ?> </div></a> -->
+    <!-- <a href="/logout"><div id="sidebar-logout" class="sidebar-button">Logout <?php echo $_SESSION['username'] ?> </div></a> -->
 </div>
 
 <style>

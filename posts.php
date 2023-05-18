@@ -53,8 +53,8 @@
                 $post_date = $row['post_date'];
                 
                 //post title
-                echo "<a href='/post.php/?post=$post_id'><div class='post'>$post_title</div></a>";
-                // echo "<a href='/category.php/?category=$post_title'><div id='sidebar-category#' class='sidebar-button'> · $post_title</div></a>";
+                echo "<a href='/post/?post=$post_id'><div class='post'>$post_title</div></a>";
+                // echo "<a href='/category/?category=$post_title'><div id='sidebar-category#' class='sidebar-button'> · $post_title</div></a>";
             }
         ?>
         </div>

@@ -47,8 +47,8 @@
                     
                     $category_title = $row['category_title'];
                     
-                    echo "<a href='/category.php/?category=$category_title'><div class='category'> $category_title</div></a>";
-                    // echo "<a href='/category.php/?category=$category_title'><div id='sidebar-category#' class='sidebar-button'> · $category_title</div></a>";
+                    echo "<a href='/category/?category=$category_title'><div class='category'> $category_title</div></a>";
+                    // echo "<a href='/category/?category=$category_title'><div id='sidebar-category#' class='sidebar-button'> · $category_title</div></a>";
                 }
             ?>
         </div>

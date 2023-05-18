@@ -65,7 +65,7 @@
                 // echo "Post Created";
 
                 //refresh page
-                header('Location: ../category.php/?category=' . $category);
+                header('Location: ../category/?category=' . $category);
             } 
         }
     ?>
@@ -96,8 +96,8 @@
                     $post_date = $row['post_date'];
                     $post_total_comments = $row['post_total_comments'];
 
-                    // echo "<a href='../post.php/?post=$post_id'><div id='post#$post_id' class='category'>$post_title · $post_total_comments comments</div></a>";
-                    echo "<a href='../post.php/?post=$post_id'><div id='post#$post_id' class='post'>#$counter · $post_title</div></a>";
+                    // echo "<a href='../post/?post=$post_id'><div id='post#$post_id' class='category'>$post_title · $post_total_comments comments</div></a>";
+                    echo "<a href='../post/?post=$post_id'><div id='post#$post_id' class='post'>#$counter · $post_title</div></a>";
                 }
             }
             else

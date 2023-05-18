@@ -43,7 +43,7 @@
             $user_id = $row['user_id'];
             $user_email = $row['user_email'];
             
-            // echo "<a href='/category.php/?category=$category_title'><div id='sidebar-category#' class='sidebar-button'> · $category_title</div></a>";
+            // echo "<a href='/category/?category=$category_title'><div id='sidebar-category#' class='sidebar-button'> · $category_title</div></a>";
         }
     ?>
 
@@ -74,7 +74,7 @@
             }
             else 
             {
-                header("Location: account.php");
+                header("Location: /account");
             }
         }
     ?>
@@ -113,7 +113,7 @@
                 }
                 else 
                 {
-                    header("Location: account.php");
+                    header("Location: /account");
                     // echo "<p class='successfulMessage'>password change successful</p>";
                 }
                 

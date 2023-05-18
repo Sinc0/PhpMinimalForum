@@ -91,7 +91,7 @@
                 // echo "Comment Posted";
 
                 //refresh page
-                header('Location: ../post.php/?post=' . $postId);
+                header('Location: ../post/?post=' . $postId);
             } 
         }
     ?>

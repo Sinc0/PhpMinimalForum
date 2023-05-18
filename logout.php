@@ -4,5 +4,5 @@
     session_destroy();
     
     //redirect to index page
-    header('Location: /index.php');
+    header('Location: /index');
 ?>

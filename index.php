@@ -70,7 +70,7 @@
                 echo $_SESSION['lastname'];
 
                 //redirect successful login to
-                header("Location: posts.php");
+                header("Location: /posts");
             }
             else
             {
