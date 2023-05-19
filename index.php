@@ -151,6 +151,12 @@
     //debugging
     console.log("path: " + <?= json_encode($_SERVER['REQUEST_URI']) ?>)
     
+    //redirects
+    if(<?= json_encode($_SERVER['REQUEST_URI']) ?> == "/privacy")
+    {
+        window.location = "/privacy.php"
+    }
+
     function openLoginDiv()
     {
         //elements
