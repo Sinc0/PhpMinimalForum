@@ -1,6 +1,6 @@
 # Minimal Forum
 - Description: Discuss with people
-- LoC: ~1720
+- LoC: ~1820
 - [Logo](https://github.com/Sinc0/PhpMinimalForum/blob/master/public/icon.png)
 
 ### Technologies
