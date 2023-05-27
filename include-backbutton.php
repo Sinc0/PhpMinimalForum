@@ -13,8 +13,8 @@
     /*** ids ***/
     #backbutton
     {
-        display: block;
         position: fixed;
+        display: block;
         bottom: 22px;
         right: 27vw;
         font-size: 40px;
@@ -22,6 +22,7 @@
         text-shadow: 1px 1px black;
         user-select: none;
         opacity: 0.4;
+        z-index: 1;
         color: white;
     }
     #backbutton:active { opacity: 1; }

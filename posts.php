@@ -53,8 +53,8 @@
                 $post_date = $row['post_date'];
                 
                 //post title
-                echo "<a href='/post/?post=$post_id'><div class='post'>$post_title</div></a>";
-                // echo "<a href='/category/?category=$post_title'><div id='sidebar-category#' class='sidebar-button'> · $post_title</div></a>";
+                echo "<a href='/post?post=$post_id'><div class='post'>$post_title</div></a>";
+                // echo "<a href='/category?category=$post_title'><div id='sidebar-category#' class='sidebar-button'> · $post_title</div></a>";
             }
         ?>
         </div>
@@ -118,7 +118,7 @@
         margin: 11px 0px 0px -4px; 
         width: calc(34vw + 10px); 
         vertical-align: top;
-        user-select: none; 
+        user-select: none;
     }
     #title { display: none; margin: 0px 0px 2px -1px; font-size: 26px; text-align: center; }
     #posts { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: left; user-select: none; }
@@ -141,7 +141,7 @@
 
         body { height: 98vh; width: 89vw; border: 0px; }
 
-        #main { width: 100%; margin: 0px; }
+        #main { width: 100%; margin: 0px 0px 0px 1px; }
         #posts { max-height: 88vh; margin-top: -8px; }
         #title { display: none; margin-bottom: 2px; }
 

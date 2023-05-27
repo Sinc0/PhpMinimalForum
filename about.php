@@ -126,7 +126,7 @@
         body { height: 98vh; width: 89vw; border: 0px; }
         input { width: 317px; }
 
-        #main { max-height: 90vh; width: 100%; margin: 0px; text-align: left; overflow-x: hidden; }
+        #main { max-height: 90vh; width: 100%; margin: 0px 0px 0px 1px; text-align: left; overflow-x: hidden; }
         #comments { max-height: 62vh; width: auto; }
         #title { display: none; margin-bottom: 2px; }
         #postTitle { margin-left: 0px; }

@@ -38,6 +38,7 @@
         if($_POST)
         {
             //variables
+            $postUserId = $_POST['postUserId'];
             $postUser = $_POST['postUser'];
             $postCategory = $_POST['postCategory'];
             $postTitle = $_POST['postTitle']; 
@@ -49,8 +50,8 @@
             $postTitle = mysqli_real_escape_string($db_connection, $postTitle);
 
             //sql query
-            $query = "INSERT INTO posts (post_user, post_category, post_title, post_text, post_date, post_total_comments) 
-            VALUES('$postUser', '$postCategory', '$postTitle', '$postText', '$postDate', '0');";
+            $query = "INSERT INTO posts (post_user, post_category, post_title, post_text, post_date, post_total_comments, post_user_id) 
+            VALUES('$postUser', '$postCategory', '$postTitle', '$postText', '$postDate', '0', '$postUserId');";
             
             //run query
             $qCreatePost = mysqli_query($db_connection, $query);
@@ -65,7 +66,7 @@
                 // echo "Post Created";
 
                 //refresh page
-                header('Location: ../category/?category=' . $category);
+                header('Location: ../category?category=' . $category);
             } 
         }
     ?>
@@ -96,8 +97,8 @@
                     $post_date = $row['post_date'];
                     $post_total_comments = $row['post_total_comments'];
 
-                    // echo "<a href='../post/?post=$post_id'><div id='post#$post_id' class='category'>$post_title · $post_total_comments comments</div></a>";
-                    echo "<a href='../post/?post=$post_id'><div id='post#$post_id' class='post'>#$counter · $post_title</div></a>";
+                    echo "<a href='../post?post=$post_id'><div id='post#$post_id' class='post'>#$counter · $post_title</div></a>";
+                    // echo "<a href='../post?post=$post_id'><div id='post#$post_id' class='category'>$post_title · $post_total_comments comments</div></a>";
                 }
             }
             else
@@ -114,7 +115,8 @@
             <input hidden name="postDate" value="<?php echo date("Y-m-d H:i:s") ?>"></input>
             <input hidden name="postCategory" value="<?php echo $category ?>"></input>
             <input required name="postTitle" placeholder="Title..." maxlength="100"></input>
-            <input hidden name="postUser" value="<?php echo $_SESSION['username'] ?>" placeholder="post author" maxlength="100"></input>
+            <input hidden name="postUser" value="<?php echo $_SESSION['username'] ?>" maxlength="100"></input>
+            <input hidden name="postUserId" value="<?php echo $_SESSION['userId'] ?>" maxlength="100"></input>
             <textarea name="postText" maxlength="1000" placeholder="Text..."></textarea>
             <button id="buttonCreatePost" class="formButton" type="submit"><p>Confirm</p></button>
         </form>

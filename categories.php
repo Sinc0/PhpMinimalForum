@@ -47,8 +47,8 @@
                     
                     $category_title = $row['category_title'];
                     
-                    echo "<a href='/category/?category=$category_title'><div class='category'> $category_title</div></a>";
-                    // echo "<a href='/category/?category=$category_title'><div id='sidebar-category#' class='sidebar-button'> · $category_title</div></a>";
+                    echo "<a href='/category?category=$category_title'><div class='category'> $category_title</div></a>";
+                    // echo "<a href='/category?category=$category_title'><div id='sidebar-category#' class='sidebar-button'> · $category_title</div></a>";
                 }
             ?>
         </div>
@@ -113,7 +113,7 @@
         margin: 4px 0px 0px -4px;
         width: calc(34vw + 10px); /* calc(31vw + 4px) */
         vertical-align: top;
-        user-select: none; 
+        user-select: none;
     }
     #title { display: none; margin: 0px 0px 10px -1px; font-size: 26px; text-align: center; }
     #categories { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: center; user-select: none; }
@@ -137,7 +137,7 @@
 
         body { height: 98vh; width: 89vw; border: 0px; }
 
-        #main { max-height: 92vh; width: 100%; margin: 0px; }
+        #main { max-height: 92vh; width: 100%; margin: 0px 0px 0px 1px; }
         #comments { max-height: 62vh; width: auto; }
         #title { display: none; margin-bottom: 2px; }
         #postTitle { margin-left: 0px; }

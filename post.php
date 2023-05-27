@@ -67,13 +67,15 @@
             $date = $_POST['commentDate'];
             $email = $_POST['commentEmail'];
             $status = $_POST['commentStatus'];
+            $userId = $_POST['commentUserId'];
 
             //clean string
             $comment = mysqli_real_escape_string($db_connection, $comment);
 
             //sql query
-            $query = "INSERT INTO comments (comment_post_id, comment_author, comment_content, comment_date, comment_email, comment_status) 
-            VALUES('$id', '$user', '$comment', '$date', '$email', '$status');";
+            $query = "INSERT INTO comments (comment_post_id, comment_author, comment_content, comment_date, comment_email, comment_status,
+            comment_user_id) 
+            VALUES('$id', '$user', '$comment', '$date', '$email', '$status', $userId);";
             // $query = "UPDATE posts SET post_total_comments = post_total_comments + 1 WHERE post_id = '$postId'";
             
             //run sql query
@@ -91,7 +93,7 @@
                 // echo "Comment Posted";
 
                 //refresh page
-                header('Location: ../post/?post=' . $postId);
+                header('Location: ../post?post=' . $postId);
             } 
         }
     ?>
@@ -150,6 +152,7 @@
             <input hidden name="commentUser" value="<?php echo $_SESSION['username'] ?>"></input>
             <input hidden name="commentEmail" value="test@email.com"></input>
             <input hidden name="commentStatus" value="test"></input>
+            <input hidden name="commentUserId" value="<?php echo $_SESSION['userId'] ?>"></input>
             <textarea required name="commentText" placeholder="comment..." maxlength="1000"></textarea>
             <button id="buttonPostComment" class="formButton" type="submit"><p>Confirm</p></button>
         </form>
@@ -285,7 +288,7 @@
         vertical-align: top;
         overflow-y: scroll;
         overflow-x: hidden;
-        user-select: none; 
+        user-select: none;
     }
     #postHeader { margin: 0px; padding: 0px; color: white; user-select: none; }
     #buttonPostComment
@@ -305,8 +308,8 @@
         display: block;
         max-height: 72vh;
         /* margin: 0px 0px 20px 0px; */
-        user-select: none;
         overflow-y: scroll;
+        user-select: none;
     }
     #commentAuthor { opacity: 0.4; white-space: nowrap; overflow-x: auto; }
     #commentText { margin: 0px; padding: 4px 0px 0px 0px; overflow-wrap: break-word; font-weight: bold; }

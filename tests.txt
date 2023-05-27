@@ -1,13 +1,18 @@
-register
-login
-logout
-
 posts
+post
 categories
+category
 account
 about
 
+register
+login
+logout
 create post
 add comment
 account update details
 account update password
+delete account only
+delete account + posts
+delete account + comments
+delete account everything

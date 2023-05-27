@@ -29,7 +29,6 @@
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            
             //sql query
             $query = "SELECT * FROM users WHERE user_username = '{$username}'";
             
@@ -64,6 +63,7 @@
                 $_SESSION['email'] = $db_email;
                 $_SESSION['firstname'] = $db_firstname;
                 $_SESSION['lastname'] = $db_lastname;
+                $_SESSION['userId'] = $db_id;
                 echo $_SESSION['username'] . "<br />"; 
                 echo $_SESSION['email'] . "<br />"; 
                 echo $_SESSION['firstname'] . "<br />"; 
@@ -110,6 +110,42 @@
                 
                 //handle query errors
                 if(!$qRegisterUser) { die("database error" . mysqli_error($db_connection)); }
+
+                // //sql query
+                // $query = "SELECT * FROM users WHERE user_username = '{$username}'";
+                // $qLoadUserByUsername = mysqli_query($db_connection, $query);
+                // $qLength = mysqli_num_rows($qLoadUserByUsername);
+
+                // //sort user data
+                // while($row = mysqli_fetch_assoc($qLoadUserByUsername))
+                // {
+                //     $db_id = $row['user_id'];
+                //     $db_email = $row['user_email'];
+                //     $db_username = $row['user_username'];
+                //     $db_password = $row['user_password'];
+                //     $db_firstname = $row['user_firstname'];
+                //     $db_lastname = $row['user_lastname'];
+                //     $db_role = $row['user_role'];
+                // }
+
+                // if($username == $db_username && $db_password == $password)
+                // {
+                //     $_SESSION['username'] = $db_username;
+                //     $_SESSION['email'] = $db_email;
+                //     $_SESSION['firstname'] = $db_firstname;
+                //     $_SESSION['lastname'] = $db_lastname;
+                    
+                //     echo $_SESSION['username'] . "<br />"; 
+                //     echo $_SESSION['email'] . "<br />"; 
+                //     echo $_SESSION['firstname'] . "<br />"; 
+                //     echo $_SESSION['lastname'];
+
+                //     header("Location: /home");
+                // }
+                // else
+                // {
+                //     echo "<br /> invalid name or password";
+                // }
             }    
         }
     ?>
@@ -150,13 +186,13 @@
 <script>
     //debugging
     console.log("path: " + <?= json_encode($_SERVER['REQUEST_URI']) ?>)
-    
+
     //redirects
     if(<?= json_encode($_SERVER['REQUEST_URI']) ?> == "/privacy")
     {
         window.location = "/privacy.php"
     }
-
+    
     function openLoginDiv()
     {
         //elements
@@ -195,9 +231,6 @@
     { 
         height: 100vh;
         width: 100vw;
-        /* background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F33.media.tumblr.com%2Fbccb82903389786a4a8e73091300ba04%2Ftumblr_npubntd6Hs1ts4htvo1_500.gif&f=1&nofb=1&ipt=2d386eb4b0f747615b3d85156079c51a1b155bff8cfa2d4b6ede6baa806389d6&ipo=images'); */
-        /* background-size: cover; */
-        /* background-repeat: no-repeat; */
         background-color: black;
     }
     body { margin-top: 28vh; font-family: Arial, Helvetica, sans-serif; }
