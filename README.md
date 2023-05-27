@@ -14,8 +14,13 @@
 - [Browse Posts](https://github.com/Sinc0/PhpMinimalForum/blob/master/posts.php#L20-L31)
 - [Create Post](https://github.com/Sinc0/PhpMinimalForum/blob/master/category.php#L36-L71)
 - [Reply to Posts](https://github.com/Sinc0/PhpMinimalForum/blob/master/post.php#L58-L97)
-- [Update Account Details](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L50-L80)
-- [Update Account Password](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L82-L123)
+- [See Account Stats](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L351-L356)
+- [See Account Details](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L358-L368)
+- [Change Account Details](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L50-L83)
+- [Change Account Password](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L85-L126)
+- [Delete Post](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L128-L149)
+- [Delete Comment](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L151-L171)
+- [Delete Account](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L173-L310)
 - [Global Back Button](https://github.com/Sinc0/PhpMinimalForum/blob/master/include-backbutton.php#L1-L5)
 
 ### Releases
