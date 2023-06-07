@@ -271,7 +271,8 @@
         margin-left: 1px;
         margin-top: -1px;
         padding: 10px;
-        user-select: none; 
+        user-select: none;
+        -webkit-user-select: none;
         font-weight: bold; 
         font-size: 18px;
         border: 0px solid white;
@@ -285,7 +286,8 @@
         margin-left: 1px;
         margin-top: -1px;
         padding: 10px;
-        user-select: none; 
+        user-select: none;
+        -webkit-user-select: none;
         font-weight: bold; 
         font-size: 18px;
         border: 0px solid white;
@@ -301,7 +303,7 @@
     }
     #selectLoginOrRegister button 
     { 
-        width: 200px; 
+        width: 50%; 
         padding: 10px; 
         font-weight: bold;
         font-size: 18px;

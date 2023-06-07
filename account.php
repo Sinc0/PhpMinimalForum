@@ -667,6 +667,8 @@
         font-size: 18px;
         font-weight: bold;
         user-select: none;
+        -webkit-user-select: none;
+        color: black;
         border: 1px solid black;
         background-color: white;
     }
@@ -686,11 +688,30 @@
         text-align: center;
         vertical-align: top;
         user-select: none;
+        -webkit-user-select: none;
     }
     #title { display: none; margin: 0px 0px 0px -1px; font-size: 26px; text-align: center; }
     #inputDisabledUsername { background-color: gray; }
-    #imgShowPassword { display: block; position: absolute; height: 27px; width: 40px; margin: 7px 0px 0px 349px; user-select: none; }
-    #imgHidePassword { display: none; position: absolute; height: 27px; width: 40px; margin: 7px 0px 0px 349px; user-select: none; }
+    #imgShowPassword 
+    { 
+        display: block; 
+        position: absolute; 
+        height: 27px; 
+        width: 40px; 
+        margin: 7px 0px 0px 349px; 
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    #imgHidePassword 
+    { 
+        display: none; 
+        position: absolute; 
+        height: 27px; 
+        width: 40px; 
+        margin: 7px 0px 0px 349px; 
+        user-select: none;
+        -webkit-user-select: none;
+    }
     #formAccountDetails { width: 400px; margin: auto; }
     #formAccountChangePassword { width: 400px; margin: auto; }
     #accountStatsTitle { margin-top: 20px; }
@@ -726,7 +747,7 @@
     #postsMadeIsZero { text-align: center; font-weight: bold; color: white; background-color: black; }
 
     /*** classes ***/
-    .sectionTitle { width: 400px; margin: auto; margin-bottom: 2px; text-align: left; user-select: none; }
+    .sectionTitle { width: 400px; margin: auto; margin-bottom: 2px; text-align: left; user-select: none; -webkit-user-select: none; }
     .errorMessage 
     { 
         display: block; 

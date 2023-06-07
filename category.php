@@ -188,6 +188,7 @@
         padding: 0px;
         font-size: 26px;
         user-select: none;
+        -webkit-user-select: none;
     }
     p { margin-top: 0px; margin-bottom: 0px; }
     a { text-decoration: none; font-weight: bold; color: black; }

@@ -21,6 +21,7 @@
         font-weight: bold;
         text-shadow: 1px 1px black;
         user-select: none;
+        -webkit-user-select: none;
         opacity: 0.4;
         z-index: 1;
         color: white;

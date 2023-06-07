@@ -119,9 +119,10 @@
         width: calc(34vw + 10px); 
         vertical-align: top;
         user-select: none;
+        -webkit-user-select: none;
     }
     #title { display: none; margin: 0px 0px 2px -1px; font-size: 26px; text-align: center; }
-    #posts { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: left; user-select: none; }
+    #posts { max-height: 86vh; overflow-y: auto; overflow-x: hidden; text-align: left; user-select: none; -webkit-user-select: none; }
 
     /*** classes ***/
     .post 

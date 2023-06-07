@@ -71,7 +71,8 @@
         overflow-y: scroll;
         overflow-x: hidden;
         white-space: nowrap;
-        user-select: none; 
+        user-select: none;
+        -webkit-user-select: none;
         background-color: black;
         /* border: 1px solid white; */
     }
@@ -85,6 +86,7 @@
         font-size: 20px;
         color: white;
         user-select: none;
+        -webkit-user-select: none;
         overflow-x: auto;
         /* background-color: black; */
     }

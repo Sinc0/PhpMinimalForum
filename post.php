@@ -270,7 +270,7 @@
         font-family: Arial, Helvetica, sans-serif;
         font-size: 16px; 
     }
-    h1 { margin: 0px; font-size: 26px; user-select: none; }
+    h1 { margin: 0px; font-size: 26px; user-select: none; -webkit-user-select: none; }
     h3 { margin: 0px; }
     p { margin-top: 0px; margin-bottom: 0px; }
     a { text-decoration: none; font-weight: bold; color: black; }
@@ -289,8 +289,9 @@
         overflow-y: scroll;
         overflow-x: hidden;
         user-select: none;
+        -webkit-user-select: none;
     }
-    #postHeader { margin: 0px; padding: 0px; color: white; user-select: none; }
+    #postHeader { margin: 0px; padding: 0px; color: white; user-select: none; -webkit-user-select: none; }
     #buttonPostComment
     {
         width: -webkit-fill-available; /* calc(34vw + 20px) */
@@ -310,6 +311,7 @@
         /* margin: 0px 0px 20px 0px; */
         overflow-y: scroll;
         user-select: none;
+        -webkit-user-select: none;
     }
     #commentAuthor { opacity: 0.4; white-space: nowrap; overflow-x: auto; }
     #commentText { margin: 0px; padding: 4px 0px 0px 0px; overflow-wrap: break-word; font-weight: bold; }
