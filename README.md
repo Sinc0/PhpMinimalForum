@@ -18,17 +18,16 @@
 - [MySQL](https://www.mysql.com/)
 
 ### Code
-- [General - Global Back Button](https://github.com/Sinc0/PhpMinimalForum/blob/master/include-backbutton.php#L1-L5)
-- [General - Browse Categories](https://github.com/Sinc0/PhpMinimalForum/blob/master/categories.php#L18-L29)
 - [General - Browse Posts](https://github.com/Sinc0/PhpMinimalForum/blob/master/posts.php#L20-L31)
-###
-- [Account - Login](https://github.com/Sinc0/PhpMinimalForum/blob/master/index.php#L26-L79)
-- [Account - Register](https://github.com/Sinc0/PhpMinimalForum/blob/master/index.php#L81-L114)
+- [General - Browse Categories](https://github.com/Sinc0/PhpMinimalForum/blob/master/categories.php#L18-L29)
+- [General - Global Back Button](https://github.com/Sinc0/PhpMinimalForum/blob/master/include-backbutton.php#L1-L5)
 ###
 - [Post - Create](https://github.com/Sinc0/PhpMinimalForum/blob/master/category.php#L36-L71)
 - [Post - Reply](https://github.com/Sinc0/PhpMinimalForum/blob/master/post.php#L58-L97)
 - [Post - Delete](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L128-L149)
 ###
+- [Account - Register](https://github.com/Sinc0/PhpMinimalForum/blob/master/index.php#L81-L114)
+- [Account - Login](https://github.com/Sinc0/PhpMinimalForum/blob/master/index.php#L26-L79)
 - [Account - Stats](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L351-L356)
 - [Account - Details](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L358-L368)
 - [Account - Change Details](https://github.com/Sinc0/PhpMinimalForum/blob/master/account.php#L50-L83)
